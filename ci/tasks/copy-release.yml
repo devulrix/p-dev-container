@@ -4,8 +4,7 @@ platform: linux
 image_resource: 
   type: docker-image
   source:
-    repository: ubuntu
-    tag: 18.04
+    repository: ulrix/t-image
 
 inputs: 
 - name: source
