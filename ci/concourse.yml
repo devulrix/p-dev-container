@@ -66,9 +66,6 @@ jobs:
       - om-linux* 
   - get: bosh-release
     trigger: true
-    params:
-      globs: 
-      - bosh-cli-\d.\d.\d.linux-amd64
   - get: pivnet-release
     trigger: true
     params:
@@ -76,9 +73,6 @@ jobs:
       - pivnet-linux-amd64-* 
   - get: helm-release
     trigger: true
-    params:
-      globs: 
-      - helm-v\d.\d.\d.linux-amd64.tar.gz
   - task: copy-release
     file: source/ci/tasks/copy-release.yml
   - put: t-image
