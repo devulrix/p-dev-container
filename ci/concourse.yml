@@ -22,6 +22,30 @@ resources:
       owner: pivotal-cf
       repository: om
 
+  - name: bosh-release
+    type: github-release
+    icon: github-circle
+    check_every: 20m 
+    source:
+      owner: cloudfoundry
+      repository: bosh-cli
+
+  - name: pivnet-release
+    type: github-release
+    icon: github-circle
+    check_every: 15m 
+    source:
+      owner: pivotal-cf
+      repository: pivnet-cli
+
+  - name: helm-release
+    type: github-release
+    icon: github-circle
+    check_every: 15m 
+    source:
+      owner: helm
+      repository: helm
+
   - name: t-image
     type: docker-image
     source:
@@ -39,10 +63,25 @@ jobs:
     params:
       globs: 
       - om-linux* 
+  - get: bosh-release
+    trigger: true
+    params:
+      globs: 
+      - bosh-cli-*-linux 
+  - get: pivnet-release
+    trigger: true
+    params:
+      globs: 
+      - pivnet-linux-amd64-* 
+  - get: helm-release
+    trigger: true
+    params:
+      globs: 
+      - helm-*-linux-amd64.tar.gz
   - task: copy-release
     file: source/ci/tasks/copy-release.yml
   - put: t-image
     params:
-          build: ./source 
+          build: ./releases
           tag_as_latest: true
 
