@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+set -ue
+
 # copy om
 echo "Copy om"
 cp om-release/om-linux-$(cat om-release/version) releases/om
