@@ -40,7 +40,7 @@ jobs:
       globs: 
       - om-linux* 
   - task: copy-release
-    file: source/copy-release.yml
+    file: source/ci/tasks/copy-release.yml
   - put: t-image
     params:
           build: ./source 
