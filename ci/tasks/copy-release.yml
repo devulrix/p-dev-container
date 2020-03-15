@@ -9,6 +9,9 @@ image_resource:
 inputs: 
 - name: source
 - name: om-release
+- name: bosh-release
+- name: pivnet-release
+- name: helm-release
 
 outputs:
 - name: releases
