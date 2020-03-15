@@ -68,7 +68,7 @@ jobs:
     trigger: true
     params:
       globs: 
-      - bosh-cli-*-linux 
+      - bosh-cli-\d.\d.\d.linux-amd64
   - get: pivnet-release
     trigger: true
     params:
@@ -78,7 +78,7 @@ jobs:
     trigger: true
     params:
       globs: 
-      - helm-*-linux-amd64.tar.gz
+      - helm-v\d.\d.\d.linux-amd64.tar.gz
   - task: copy-release
     file: source/ci/tasks/copy-release.yml
   - put: t-image
