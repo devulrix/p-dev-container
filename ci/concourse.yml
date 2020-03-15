@@ -35,9 +35,12 @@ jobs:
   - get: source
     trigger: true
   - get: om-release
+    trigger: true
     params:
       globs: 
       - om-linux* 
+  - task: copy-release
+    file: source/copy-release.yml
   - put: t-image
     params:
           build: ./source 
