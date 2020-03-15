@@ -48,6 +48,7 @@ resources:
 
   - name: t-image
     type: docker-image
+    icon: docker
     source:
       username: ((docker-user))
       password: ((docker-password))
