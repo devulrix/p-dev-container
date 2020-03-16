@@ -13,7 +13,7 @@ echo "pivnet-cli"
 cp pivnet-release/pivnet-linux-amd64-$(cat pivnet-release/version) releases/pivnet
 
 echo "get helm"
-curl -L0 https://get.helm.sh/helm-v`$(cat helm-release/version)`-linux-amd64.tar.gz --output helm.tar.gz
+curl -L0 https://get.helm.sh/helm-v"$(cat helm-release/version)"-linux-amd64.tar.gz --output helm.tar.gz
 tar zxf helm.tar.gz 
 cp linux-amd64/helm releases/helm
 
