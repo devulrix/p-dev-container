@@ -17,7 +17,7 @@ resources:
   - name: om-release
     type: github-release
     icon: github-circle
-    check_every: 10m 
+    check_every: 110m 
     source:
       owner: pivotal-cf
       repository: om
@@ -25,7 +25,7 @@ resources:
   - name: bosh-release
     type: github-release
     icon: github-circle
-    check_every: 20m 
+    check_every: 120m 
     source:
       owner: cloudfoundry
       repository: bosh-cli
@@ -33,7 +33,7 @@ resources:
   - name: pivnet-release
     type: github-release
     icon: github-circle
-    check_every: 15m 
+    check_every: 120m 
     source:
       owner: pivotal-cf
       repository: pivnet-cli
@@ -41,7 +41,7 @@ resources:
   - name: helm-release
     type: github-release
     icon: github-circle
-    check_every: 15m 
+    check_every: 130m 
     source:
       owner: helm
       repository: helm
