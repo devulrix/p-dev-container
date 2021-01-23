@@ -5,6 +5,12 @@ resource_types:
     source:
       repository: pcfseceng/email-resource
 
+  - name: pivnet
+    type: docker-image
+    source:
+      repository: pivotalcf/pivnet-resource
+      tag: latest-final
+
 resources:
   - name: source
     type: git
@@ -95,7 +101,7 @@ jobs:
       globs:
       - ytt-linux-amd64*
   - get: kapp-release
-    trigger: ture
+    trigger: true
     params:
       globs:
       - kapp-linux-amd64*
