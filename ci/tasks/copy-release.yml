@@ -12,6 +12,8 @@ inputs:
 - name: bosh-release
 - name: pivnet-release
 - name: helm-release
+- name: kapp-release
+- name: ytt-release
 
 outputs:
 - name: releases

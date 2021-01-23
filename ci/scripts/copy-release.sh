@@ -21,6 +21,12 @@ echo "download latest stable kubectl"
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 cp kubectl releases/kubectl
 
+echo "Copy ytt-cli"
+cp ytt-release/ytt-linux-amd64 releases/ytt
+
+echo "Copy kapp-cli"
+cp kapp-release/kapp-linux-amd64 releases/kapp
+
 # make everythin executable
 chmod +x ./releases/*
 

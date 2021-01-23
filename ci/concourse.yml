@@ -46,6 +46,22 @@ resources:
       owner: helm
       repository: helm
 
+  - name: ytt-release
+    type: github-release
+    icon: github-circle
+    check_every: 130m 
+    source:
+      owner: vmware-tanzu
+      repository: carvel-ytt
+
+  - name: kapp-release
+    type: github-release
+    icon: github-circle
+    check_every: 130m 
+    source:
+      owner: vmware-tanzu
+      repository: carvel-kapp
+
   - name: t-image
     type: docker-image
     icon: docker
@@ -73,6 +89,16 @@ jobs:
       - pivnet-linux-amd64-* 
   - get: helm-release
     trigger: true
+  - get: ytt-release
+    trigger: true
+    params:
+      globs:
+      - ytt-linux-amd64*
+  - get: kapp-release
+    trigger: ture
+    params:
+      globs:
+      - kapp-linux-amd64*
   - task: copy-release
     file: source/ci/tasks/copy-release.yml
   - put: t-image
