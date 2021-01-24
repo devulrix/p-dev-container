@@ -4,7 +4,7 @@ platform: linux
 image_resource: 
   type: docker-image
   source:
-    repository: ulrix/t-image
+    repository: public.ecr.aws/bacardi/alpine:3.13.0
 
 inputs: 
 - name: source
