@@ -104,7 +104,7 @@ jobs:
     trigger: true
     params:
       globs:
-      - kapp-linux-amd64*
+      - kapp-linux-amd*
   - task: copy-release
     file: source/ci/tasks/copy-release.yml
   - put: t-image
