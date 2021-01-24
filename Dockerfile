@@ -1,4 +1,4 @@
-FROM alpine:3.13.0
+FROM public.ecr.aws/bacardi/alpine:3.13.0
 LABEL maintainer="ulrich.hoelscher@outlook.com"
 
 RUN apk update && apk add --no-cache jq lftp curl
