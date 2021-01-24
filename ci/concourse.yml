@@ -95,6 +95,9 @@ jobs:
       - pivnet-linux-amd64-* 
   - get: helm-release
     trigger: true
+    params:
+      globs:
+      - helm*-linux-amd64.tar.gz
   - get: ytt-release
     trigger: true
     params:
