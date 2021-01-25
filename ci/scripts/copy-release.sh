@@ -31,7 +31,7 @@ echo "Copy kapp-cli"
 cp kapp-release/kapp-linux-amd64 releases/kapp
 
 echo "Copy kp-cli"
-cp kp-release/kp-linux releases/kp
+cp kp-release/kp-linux* releases/kp
 
 # make everythin executable
 chmod +x ./releases/*
