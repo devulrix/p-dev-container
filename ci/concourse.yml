@@ -89,6 +89,7 @@ resources:
       username: ((docker-user))
       password: ((docker-password))
       repository: ((docker-repo))/t-image
+      tag: 1.0     
 
 jobs:
 - name: build-container
@@ -132,4 +133,3 @@ jobs:
     params:
           build: ./releases
           tag_as_latest: true
-
