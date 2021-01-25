@@ -3,7 +3,7 @@
 set -ue
 
 # install curl
-apt update && apt install curl -y
+apk update && apk add --no-cache jq lftp curl
 
 # copy om
 echo "Copy om"
