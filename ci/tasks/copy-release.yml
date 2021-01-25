@@ -4,7 +4,8 @@ platform: linux
 image_resource: 
   type: docker-image
   source:
-    repository: public.ecr.aws/ubuntu/ubuntu:latest
+    repository: public.ecr.aws/ubuntu/ubuntu
+    tag: latest
 
 inputs: 
 - name: source
