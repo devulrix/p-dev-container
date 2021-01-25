@@ -27,6 +27,7 @@ resources:
     source:
       owner: pivotal-cf
       repository: om
+      access_token: ((gh-token))
 
   - name: bosh-release
     type: github-release
@@ -35,6 +36,7 @@ resources:
     source:
       owner: cloudfoundry
       repository: bosh-cli
+      access_token: ((gh-token))
 
   - name: pivnet-release
     type: github-release
@@ -43,6 +45,7 @@ resources:
     source:
       owner: pivotal-cf
       repository: pivnet-cli
+      access_token: ((gh-token))
 
   - name: helm-release
     type: github-release
@@ -51,6 +54,7 @@ resources:
     source:
       owner: helm
       repository: helm
+      access_token: ((gh-token))
 
   - name: ytt-release
     type: github-release
@@ -59,6 +63,7 @@ resources:
     source:
       owner: vmware-tanzu
       repository: carvel-ytt
+      access_token: ((gh-token))
 
   - name: kapp-release
     type: github-release
@@ -67,6 +72,7 @@ resources:
     source:
       owner: vmware-tanzu
       repository: carvel-kapp
+      access_token: ((gh-token))
 
   - name: t-image
     type: docker-image
