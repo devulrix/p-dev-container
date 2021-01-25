@@ -15,6 +15,7 @@ inputs:
 - name: helm-release
 - name: kapp-release
 - name: ytt-release
+- name: kp-release
 
 outputs:
 - name: releases

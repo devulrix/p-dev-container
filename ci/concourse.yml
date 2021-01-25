@@ -74,6 +74,14 @@ resources:
       repository: carvel-kapp
       access_token: ((gh-token))
 
+  - name: kp-release
+    type: pivnet
+    source:
+      api_token: ((api-token))
+      product_slug: build-service
+      product_version: 1.0.4
+      #--product-file-id=817470
+
   - name: t-image
     type: docker-image
     icon: docker
@@ -114,6 +122,10 @@ jobs:
     params:
       globs:
       - kapp-linux-amd*
+  - get: kp-release
+    params:
+      globs:
+      - kp-linux*
   - task: copy-release
     file: source/ci/tasks/copy-release.yml
   - put: t-image
